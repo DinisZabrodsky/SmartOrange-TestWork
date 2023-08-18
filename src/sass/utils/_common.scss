@@ -1,0 +1,37 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+
+* {
+    box-sizing: border-box;
+}
+
+.conteiner {
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1440px;
+
+    padding-left: 135px;
+    padding-right: 135px;
+
+    // background-color: #fff;
+    background-color: aqua;
+}
+
+
+img {
+    display: block;
+    object-fit: cover;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
