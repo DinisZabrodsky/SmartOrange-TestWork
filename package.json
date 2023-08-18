@@ -1,11 +1,11 @@
 {
-  "name": "parcel-project-template",
+  "name": "SmartOrange-TestWork",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://DinisZabrodsky.github.io/SmartOrange-TestWork",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /SmartOrange-TestWork/"
   },
   "repository": {
     "type": "git",
