@@ -1,8 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+$primary-nav-color: #333;
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 .conteiner {
@@ -20,10 +22,21 @@
     background-color: aqua;
 }
 
+// picture {
+//     width: 100%;
+//     height: 100%;
+// }
+
 
 img {
     display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+ul{
+    padding: 0;
 }
 
 li {
@@ -33,5 +46,45 @@ li {
 }
 
 a {
+
+
+    font-family: "TTHoves-Regular";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+    letter-spacing: 2.4px;
+
     text-decoration: none;
+    color: $primary-nav-color;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+@font-face {
+    font-family: TTHoves-Bold;
+    src: url(../fonts/TTHoves-Bold.ttf);
+}
+
+@font-face {
+    font-family: TTHoves-Light;
+    src: url(../fonts/TTHoves-Light.ttf);
+}
+
+@font-face {
+    font-family: TTHoves-Medium;
+    src: url(../fonts/TTHoves-Medium.ttf);
+}
+
+@font-face {
+    font-family: TTHoves-Regular;
+    src: url(../fonts/TTHoves-Regular.ttf);
+}
+
+@font-face {
+    font-family: Net-SFProDisplay-Black;
+    src: url(../fonts/Net-SFProDisplay-Black.ttf);
 }
