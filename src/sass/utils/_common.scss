@@ -60,9 +60,35 @@ a {
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 222px;
+    height: 71px;
+    gap: 12px;
+
+    font-family: TTHoves-Regular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+    letter-spacing: 2.4px;
+
+    color: $primary-nav-color;
+    background-color: #fff;
+
+    text-transform: uppercase;
     cursor: pointer;
 }
 
+svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    fill: inherit;
+}
 
 @font-face {
     font-family: TTHoves-Bold;
