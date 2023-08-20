@@ -1,10 +1,18 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
-$primary-nav-color: #333;
+$primary-nav-color: rgba(51, 51, 51, 1);
+$primary-titel-color: #BDBDBD;
 
 * {
     box-sizing: border-box;
     margin: 0;
+
+    font-family: "TTHoves-Regular" sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+
+
 }
 
 .conteiner {
@@ -19,13 +27,16 @@ $primary-nav-color: #333;
     padding-right: 135px;
 
     // background-color: #fff;
-    background-color: aqua;
+    // background-color: aqua;
 }
 
-// picture {
-//     width: 100%;
-//     height: 100%;
-// }
+h2 {
+    font-family: 'TTHoves-Light', sans-serif;
+    font-size: 64px;
+    font-weight: 300;
+
+    color: $primary-titel-color;
+}
 
 
 img {
@@ -47,12 +58,7 @@ li {
 
 a {
 
-
-    font-family: "TTHoves-Regular";
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1; /* 100% */
     letter-spacing: 2.4px;
 
     text-decoration: none;
@@ -68,18 +74,21 @@ button {
     height: 71px;
     gap: 12px;
 
-    font-family: TTHoves-Regular;
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1; /* 100% */
     letter-spacing: 2.4px;
 
     color: $primary-nav-color;
     background-color: #fff;
+    border: none;
 
     text-transform: uppercase;
     cursor: pointer;
+
+    transition: box-shadow 250ms linear;
+
+    &:hover, &:focus {
+        box-shadow: 0px 3px 1px rgba(206, 15, 15, 0.1), 0px 1px 2px rgba(214, 11, 11, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }
 
 svg {
@@ -87,30 +96,34 @@ svg {
     width: 24px;
     height: 24px;
 
-    fill: inherit;
+    fill: currentColor;
+}
+
+.hidden {
+    display: none;
 }
 
 @font-face {
-    font-family: TTHoves-Bold;
+    font-family: 'TTHoves-Bold';
     src: url(../fonts/TTHoves-Bold.ttf);
 }
 
 @font-face {
-    font-family: TTHoves-Light;
+    font-family: 'TTHoves-Light';
     src: url(../fonts/TTHoves-Light.ttf);
 }
 
 @font-face {
-    font-family: TTHoves-Medium;
+    font-family: 'TTHoves-Medium';
     src: url(../fonts/TTHoves-Medium.ttf);
 }
 
 @font-face {
-    font-family: TTHoves-Regular;
+    font-family: 'TTHoves-Regular';
     src: url(../fonts/TTHoves-Regular.ttf);
 }
 
 @font-face {
-    font-family: Net-SFProDisplay-Black;
+    font-family: 'Net-SFProDisplay-Black';
     src: url(../fonts/Net-SFProDisplay-Black.ttf);
 }

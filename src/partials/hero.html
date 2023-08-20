@@ -1,50 +1,55 @@
 <div class="conteiner hero">
     <div class="hero-text">
         <!-- Не зовсім розумію "Project homme" статична назва чи статичний лише "Project", а "Home" - динамічний і буде змінюватись в залежності від того який слайд наразі відображається  -->
-        <h1>PROJECT <br> <span>Home</span></h1>
+        <h2>PROJECT <br> <span id="heroTitelSpan">Home</span></h2>
 
-        <div>
-            <button type="button" id="heroSlaiderLeft">
+        <div class="hero-text-button">
+            <button type="button" id="heroSlaiderNext">
                 <svg>
-                    <use href="./images/SmartOrange.svg#icon-arrow-left"></use>
+                    <use href="./images/SmartOrange.svg#icon-ico-shape-left"></use>
                 </svg>
             </button>
-            <button type="button" id="heroSlaiderRight">
+            <button type="button" id="heroSlaiderBack">
                 <svg>
-                    <use href="./images/SmartOrange.svg#icon-arrow-right"></use>
+                    <use href="./images/SmartOrange.svg#icon-ico-shape-right"></use>
                 </svg>
             </button>
         </div>
+
+        <div class="hero-text-count">
+            <span>01</span>
+            <span>/</span>
+            <span>02</span>
+        </div>
     </div>
 
-    <div>
-        <span></span>
-        <span></span>
-    </div>
+    
 
     <div class="hero-img">
+        <div id="slider">
+            <picture>
+                <source srcset="./images/hero/House.webp 1x, ./images/hero/House@2.webp 2x" type="image/webp" />
+                <source srcset="./images/hero/House.jpg 1x, ./images/hero/House@2.jpg 2x" type="image/jpeg" />
+                <img src="./images/hero/House.jpg" alt="House" data-modal="001" loading="lazy"/>
+            </picture>
+            
+            <picture>
+                <source srcset="./images/hero/WebSite.webp 1x, ./images/hero/WebSite.webp 2x" type="image/webp" />
+                <source srcset="./images/hero/WebSite.jpg 1x, ./images/hero/WebSite.jpg 2x" type="image/jpeg" />
+                <img src="./images/hero/WebSite.jpg" alt="WebSite" data-modal="002" loading="lazy"/>
+            </picture>
+    
+            <picture>
+                <source srcset="./images/hero/App.webp 1x, ./images/hero/App.webp 2x" type="image/webp" />
+                <source srcset="./images/hero/App.jpg 1x, ./images/hero/App.jpg 2x" type="image/jpeg" />
+                <img src="./images/hero/App.jpg" alt="App" data-modal="003" loading="lazy"/>
+            </picture>
+        </div>
 
-        <!-- <picture>
-            <source srcset="./images/hero/House.webp 1x, ./images/hero/House@2.webp 2x" type="image/webp" />
-            <source srcset="./images/hero/House.jpg 1x, ./images/hero/House@2.jpg 2x" type="image/jpeg" />
-            <img src="./images/hero/House.jpg" alt="House" data-modal="001" loading="lazy"/>
-        </picture> -->
-        
-        <picture>
-            <source srcset="./images/hero/WebSite.webp 1x, ./images/hero/WebSite.webp 2x" type="image/webp" />
-            <source srcset="./images/hero/WebSite.jpg 1x, ./images/hero/WebSite.jpg 2x" type="image/jpeg" />
-            <img src="./images/hero/WebSite.jpg" alt="WebSite" data-modal="002" loading="lazy"/>
-        </picture>
-
-        <!-- <picture>
-            <source srcset="./images/hero/App.webp 1x, ./images/hero/App.webp 2x" type="image/webp" />
-            <source srcset="./images/hero/App.jpg 1x, ./images/hero/App.jpg 2x" type="image/jpeg" />
-            <img src="./images/hero/App.jpg" alt="App" data-modal="003" loading="lazy"/>
-        </picture> -->
         <button type="button"> 
             переглянути
             <svg>
-                <use></use>
+                <use href="./images/SmartOrange.svg#icon-ico-shape-right"></use>
             </svg>
         </button>
     </div>
