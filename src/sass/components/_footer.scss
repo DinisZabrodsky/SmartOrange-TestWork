@@ -1,0 +1,33 @@
+footer {
+    background-color: #2C2C2C;
+}
+
+.footer {
+    display: flex;
+    gap: 100px;
+
+    margin-top: 150px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &Logo {
+        display: block;
+        width: 145px;
+        height: 94px;
+    }
+
+
+    & a {
+        font-family: 'TTHoves-Medium', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.7; /* 171.429% */
+        letter-spacing: 0.42px;
+
+        color: #fff;
+    }
+
+    ul {
+        margin-top: 25px;
+    }
+}

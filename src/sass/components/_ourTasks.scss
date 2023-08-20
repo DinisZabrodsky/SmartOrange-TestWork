@@ -1,0 +1,30 @@
+.ourTasks {
+    display: block;
+    margin-top: 120px;
+
+    & div {
+        display: flex;
+
+        margin-top: 60px;
+
+        & p {
+            font-family: 'TTHoves-Regular', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.63; /* 163.636% */
+            color: $primary-nav-color;
+        }
+
+        & p:nth-child(1) {
+            margin-left: 135px;
+
+            width: 280px;
+        }
+
+        & p:nth-child(2) {
+            margin-left: auto;
+
+            width: 460px;
+        }
+    }
+}
