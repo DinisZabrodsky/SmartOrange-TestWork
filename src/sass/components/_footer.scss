@@ -4,7 +4,8 @@ footer {
 
 .footer {
     display: flex;
-    gap: 100px;
+    justify-content: space-between;
+    // gap: 100px;
 
     margin-top: 150px;
     padding-top: 60px;
@@ -31,6 +32,7 @@ footer {
 
     ul {
         margin-top: 25px;
+
     }
 
     &Logo {
@@ -49,5 +51,31 @@ footer {
         & li {
             margin-bottom: 30px;
         }
+    }
+
+    // &Social {
+
+    //     & > ul {
+    //         margin-top: 75px;
+    //     }
+
+    //     & a {
+    //         display: flex;
+    //         width: 20px;
+    //         height: 20px;
+    //     }
+    // }
+}
+
+
+.foterSocial {
+    &  ul {
+        display: flex;
+        gap: 40px;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
     }
 }
