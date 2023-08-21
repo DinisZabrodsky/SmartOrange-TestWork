@@ -10,14 +10,16 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    &Logo {
-        display: block;
-        width: 145px;
-        height: 94px;
+    & svg {
+        width: 16px;
+        height: 16px;
     }
 
-
     & a {
+        display: flex;
+        gap: 15px;
+
+
         font-family: 'TTHoves-Medium', sans-serif;
         font-size: 14px;
         font-weight: 500;
@@ -29,5 +31,23 @@ footer {
 
     ul {
         margin-top: 25px;
+    }
+
+    &Logo {
+        display: block;
+        width: 145px;
+        height: 94px;
+    }
+
+    &Nav {
+        & li {
+            margin-bottom: 16px;
+        }
+    }
+
+    &Contacts {
+        & li {
+            margin-bottom: 30px;
+        }
     }
 }
