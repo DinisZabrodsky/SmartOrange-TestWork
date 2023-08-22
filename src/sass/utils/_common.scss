@@ -33,10 +33,20 @@ $primary-text-color: #000;
 
 h2 {
     font-family: 'TTHoves-Light', sans-serif;
-    font-size: 64px;
+    font-size: clamp(48px, 64px, 72px);
     font-weight: 300;
 
     color: $primary-titel-color;
+}
+
+h3 {
+    font-family: 'TTHoves-Bold', sans-serif;
+    // font-size: 64px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    
+    color: #FFF;
 }
 
 h4 {
@@ -143,4 +153,9 @@ svg {
 @font-face {
     font-family: 'Net-SFProDisplay-Black';
     src: url(../fonts/Net-SFProDisplay-Black.ttf);
+}
+
+@font-face {
+    font-family: "GothicA1-Regular";
+    src: url(../fonts/GothicA1-Regular.ttf);
 }
