@@ -13,18 +13,23 @@ refs.btnBack.addEventListener('click', backSlide);
 
 
 let count = 0
-const lengSlider = refs.slider.length
+let firstCount = 0
 
-sliderControler ()
+let firstStart = true
+const animationDelay = 500
+
+sliderControler()
 
 
 function nextSlide() {
-   count = count + 1 === lengSlider ? 0 : count = count += 1;
+   firstCount = count
+   count = count + 1 === refs.slider.length ? 0 : count = count += 1;
    sliderControler()
 }
 
 function backSlide() {
-    count = count === 0 ? lengSlider - 1 : count -= 1;
+    firstCount = count
+    count = count === 0 ? refs.slider.length - 1 : count -= 1;
     sliderControler()
 }
 
@@ -32,34 +37,63 @@ function backSlide() {
 // Однак тут вирішив спробувати відштовхнутись від HTML щоб не писати перевірки на наявність всіх необхідних стрічок.
 
 function sliderControler() {
-    const {titel, url} = visibleSlide()
-    changeTitelSpan(titel)
+    const {titel, url} = getData()
+
+    // При всіх наступних запусках функції
+    !firstStart && slideAnimation()
+    !firstStart && changeTitelSpan(titel)
+
+    //При першому запуску функції 
+    firstStart && visibleSlide()
+
     changeNumber()
     btnLink(url)
  
 }
 
 function visibleSlide() {
-    const data = {}
 
     refs.slider.forEach((element, index)=> {
         if(count === index) {
             element.classList.remove('hidden')
-
-            data.titel = element.children[2].alt
-            data.url = element.children[2].dataset.modal
-
             return
         }
-
+    
         element.classList.add('hidden')
+        return
     })
 
-    return data
+    firstStart = false
+
+}
+
+function getData() {
+    return data = {
+        titel: refs.slider[count].children[2].alt,
+        url: refs.slider[count].children[2].dataset.modal,
+    }
+
+}
+
+function slideAnimation () {
+
+    refs.slider[firstCount].classList.add('animationHiden')
+
+    setTimeout(() => {
+        refs.slider[count].classList.remove('hidden');
+        refs.slider[firstCount].classList.add('hidden')
+        refs.slider[firstCount].classList.remove('animationHiden')
+    }, animationDelay)
 }
 
 function changeTitelSpan(titel) {
-    refs.titelSpan.innerHTML = titel
+    refs.titelSpan.classList.add('animationHiden')
+
+    setTimeout(() => {
+        refs.titelSpan.innerHTML = titel 
+        refs.titelSpan.classList.remove('animationHiden')
+    }, animationDelay);
+    
 }
 
 // Не зовсім зрозумів пагінацію, тому відображую попередній та наступний слайд
@@ -67,6 +101,7 @@ function changeTitelSpan(titel) {
 function changeNumber() {
 
     const currentElement = count + 1
+    const lengSlider = refs.slider.length
     // console.log(currentElement)
 
     if (currentElement - 1 === 0 && lengSlider > currentElement) {

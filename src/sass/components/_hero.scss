@@ -1,5 +1,19 @@
+$animationTime: 500ms;
 
+@keyframes visibleSpan {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
+
+.animationHiden {
+    opacity: 0;
+
+}
 
 .hero-text {
     display: flex;
@@ -11,6 +25,7 @@
     width: 34%;
 
     & h2 {
+        position: relative;
         margin-top: auto;
 
         & span {
@@ -20,7 +35,12 @@
 
             color: $primary-nav-color;
             text-transform: uppercase;
+
+            animation: visibleSpan $animationTime linear;
+            transition: opacity $animationTime linear;
         }
+
+        
 
     }
 
@@ -57,6 +77,11 @@
     width: 66%;
     height: 830px;
     overflow: hidden;
+
+    & picture {
+        animation: visibleSpan $animationTime linear;
+        transition: opacity $animationTime linear;
+    }
 
     & > div {
         width: 100%;

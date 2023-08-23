@@ -18,7 +18,7 @@
             overflow: hidden;
 
             &:nth-child(1), &:nth-child(2) {
-                flex-basis: 570px;
+                flex-basis: calc((100% / 2) - 15px);
 
                 & h3 {
                     font-size: 64px;
@@ -27,7 +27,8 @@
             }
 
             &:nth-child(3) {
-                flex-basis: 270px;
+                // flex-basis: 270px;
+                flex-basis: 23.07692%;
                 & h3 {
                     font-size: 32px;
                 }
@@ -35,7 +36,8 @@
             }
 
             &:nth-child(4) {
-                flex-basis: 470px;
+                // flex-basis: 470px;
+                flex-basis: 40,17094%;
                 & h3 {
                     font-size: 54px;
                 }
@@ -43,7 +45,8 @@
             }
 
             &:nth-child(5) {
-                flex-basis: 370px;
+                // flex-basis: 370px;
+                flex-basis: 31,62393%;
                 & h3 {
                     font-size: 44px;
                 }
