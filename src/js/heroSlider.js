@@ -16,7 +16,7 @@ let count = 0
 let firstCount = 0
 
 let firstStart = true
-const animationDelay = 500
+const animationDelay = 300
 
 sliderControler()
 

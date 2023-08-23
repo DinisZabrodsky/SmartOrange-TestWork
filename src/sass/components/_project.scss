@@ -23,12 +23,14 @@
                 & h3 {
                     font-size: 64px;
                 }
+
+                // 24,32432432
                 
             }
 
             &:nth-child(3) {
                 // flex-basis: 270px;
-                flex-basis: 23.07692%;
+                flex-basis: calc(24.78632478% - 20px);
                 & h3 {
                     font-size: 32px;
                 }
@@ -37,7 +39,7 @@
 
             &:nth-child(4) {
                 // flex-basis: 470px;
-                flex-basis: 40,17094%;
+                flex-basis: calc( 41.88034188% - 20px);
                 & h3 {
                     font-size: 54px;
                 }
@@ -46,7 +48,7 @@
 
             &:nth-child(5) {
                 // flex-basis: 370px;
-                flex-basis: 31,62393%;
+                flex-basis: calc(33.3333333% - 20px);
                 & h3 {
                     font-size: 44px;
                 }
