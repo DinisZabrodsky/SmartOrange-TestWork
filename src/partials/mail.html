@@ -1,33 +1,40 @@
 <div class="conteiner mail">
     <h2>Зв'язатись із нами</h2>
 
-    <div class="mailForm">
-        <div>
+    <div>
+
+        <div class="mailFrom">
             <form action="form">
                 <ul>
                     <li>
                         <label for="name"></label>
-                        <input id="name" type="text" name="name">
+                        <input id="name" type="text" name="name" placeholder="Ім'я" minlength="3">
                     </li>
                     <li>
                         <label for="tel"></label>
-                        <input id="tel" type="tel" name="tel" required>
+                        <input id="tel" type="tel" name="tel" placeholder="Номер телефону *" required minlength="9">
                     </li>
                     <li>
                         <label for="mail"></label>
-                        <input id="mail" type="text" name="mail" required>
+                        <input id="mail" type="text" name="mail" placeholder="E-mail *" required>
                     </li>
                     <li>
                         <label for="product"></label>
-                        <input id="product" type="text" name="product">
+                        <input id="product" type="text" name="product" placeholder="Товар або послуга">
                     </li>
                     <li>
                         <label for="message"></label>
-                        <textarea id="message" type="" name="message" required>
+                        <textarea id="message" name="message" placeholder="Повідомлення *" required></textarea>
                     </li>
                     <li>
-                        <label for="check"></label>
-                        <input idd="check" type="checkbox" name="check" required>
+                        <input id="check" type="checkbox" name="check" required>
+                        <label for="check">
+                            Надсилаючи заявку Ви погоджуєтесь із політикою конфіденційності
+                            <svg>
+                                <use href="./images/SmartOrange.svg#icon-Check"></use>
+                            </svg>
+                        </label>
+                        
                     </li>
                 </ul>
 
@@ -42,6 +49,7 @@
             </form>
         </div>
 
+
         <div class="mailImg">
             <picture>
                 <source srcset="./images/mail/mail.webp 1x, ./images/mail/mail@2x.webp 2x" type="image/webp" />
@@ -51,5 +59,8 @@
 
         </div>
     </div>
+
+
+        
 
 </div>
